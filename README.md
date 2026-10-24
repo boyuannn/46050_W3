@@ -1,25 +1,23 @@
-# W3
+# README #
 
-`load_and_label(path, label)` reads one CSV file, removes the unused
-row-number column, and adds a diagnosis label column (CN=0, MCI=1, AD=2).
+### What is this repository for? ###
 
-## How to run the notebook
-```
-conda env create -f environment.yml
-conda activate W3
-jupyter lab W3.ipynb
-```
+* ADNI data pipeline: does CSF tau differ between CN, MCI and AD?
+* Load → Filter → Compute → Statistics → Report, one module for each step
+  in the `csv_labeler` package.
 
-## Install as a Python package
-The function is also available as the `csv_labeler` package. With the `W3`
-environment active, run this from the repo folder:
-```
-pip install -e .
-```
+### How do I get set up? ###
 
-## Usage
-```python
-from csv_labeler.functions import load_and_label
+* clone repo
+* `conda env create -f environment.yml` create a new environment from the .yml file
+* `pip install .` in that environment
 
-df = load_and_label("data/CN.csv", 0)
-```
+### Data ###
+
+* You will need the ADNI clinical files: `CN.new.csv`, `MCI.new.csv`, `AD.new.csv`.
+  ADNI data cannot be shared, so it is not in this repo.
+* Put them in `~/Data/ADNI_project/raw/`. The path is set in `csv_labeler/config.py`.
+
+### How to run ###
+
+* Open `notebook/w4.ipynb` and Run All.
