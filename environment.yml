@@ -4,4 +4,6 @@ channels:
 dependencies:
   - python=3.12
   - pandas
+  - scipy
+  - matplotlib
   - jupyterlab
